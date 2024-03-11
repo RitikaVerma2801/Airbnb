@@ -1,0 +1,137 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "imageSrc": "https://media.istockphoto.com/id/1203392697/photo/sukhna-lake-chandigarh-at-sunrise.jpg?b=1&s=612x612&w=0&k=20&c=JU9OTDRnG3zeAXZbgZOoAAARvOkGq1shF_LcJud-DRc=",
+            "city": "Chandigarh",
+            "state": "Punjab",
+            "rating": "4.9",
+            "price": "$123.45 night",
+            "img1": "https://www.adotrip.com/public/images/areas/master_images/5e41376f6a155-Rock_Garden_Attractions.jpg",
+            "img2": "https://t3.ftcdn.net/jpg/02/59/99/40/360_F_259994044_4lBOhrqhzv7Nt2sra5yUPrnAfZD4NM4I.jpg",
+            "img3": "https://media.istockphoto.com/id/1054916766/photo/calm-water.webp?b=1&s=170667a&w=0&k=20&c=BShDnOclRjWSZ4zePaOf5i5GhMqLvQrYj7yzI23YjLk=",
+            "img4": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Open_Hand_monument%2C_Chandigarh.jpg/1200px-Open_Hand_monument%2C_Chandigarh.jpg"
+        },
+        {
+            "id": 2,
+            "imageSrc": "https://t3.ftcdn.net/jpg/03/14/63/28/360_F_314632891_XdVJMdIPnr32Y3sspzTk76dfn1ZAgFB3.jpg",
+            "city": "Shimla",
+            "state": "Himachal Pradesh",
+            "rating": "3.1",
+            "price": "$145.99 night",
+            "img1": "https://t3.ftcdn.net/jpg/04/34/02/68/360_F_434026823_b8xQ13UvWp7SBLhrHSBbcRBr8rGneBk6.jpg",
+            "img2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfzPw_O8s-caYzqlp6hCXVvU6Gg5xjC-dMuw&usqp=CAU",
+            "img3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYZfU5lHvN2xPFLe2LWofBFTYmEGXHbvfcCQ&usqp=CAU",
+            "img4": "https://images.pexels.com/photos/7846490/pexels-photo-7846490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+            "id": 3,
+            "imageSrc": "https://t4.ftcdn.net/jpg/01/71/19/19/360_F_171191968_h1yWvnUTa0MM6iIBnGdAHZeUAJEh9dBh.jpg",
+            "city": "Manali",
+            "state": "Himachal Pradesh",
+            "rating": "3.9",
+            "price": "$99.99 night",
+            "img1": "https://t4.ftcdn.net/jpg/03/04/01/79/360_F_304017914_06ibltT3eX4UID80q0dSUybLsrfzUubL.jpg",
+            "img2": "https://t4.ftcdn.net/jpg/03/04/01/79/360_F_304017914_06ibltT3eX4UID80q0dSUybLsrfzUubL.jpg",
+            "img3": "https://t4.ftcdn.net/jpg/03/04/01/79/360_F_304017914_06ibltT3eX4UID80q0dSUybLsrfzUubL.jpg",
+            "img4": "https://t4.ftcdn.net/jpg/03/04/01/79/360_F_304017914_06ibltT3eX4UID80q0dSUybLsrfzUubL.jpg"
+        },
+        {
+            "id": 4,
+            "imageSrc":"https://www.india.com/wp-content/uploads/2018/08/shutterstock-redfort1.jpg" ,
+            "city": "Delhi",
+            "state": "Delhi",
+            "rating": "4.3",
+            "price": "$112.75 night",
+            "img1": "https://c4.wallpaperflare.com/wallpaper/718/409/81/street-india-arch-parade-wallpaper-preview.jpg",
+            "img2": "https://c4.wallpaperflare.com/wallpaper/718/409/81/street-india-arch-parade-wallpaper-preview.jpg",
+            "img3": "https://c4.wallpaperflare.com/wallpaper/718/409/81/street-india-arch-parade-wallpaper-preview.jpg",
+            "img4": "https://c4.wallpaperflare.com/wallpaper/718/409/81/street-india-arch-parade-wallpaper-preview.jpg"
+        },
+        {
+            "id": 5,
+            "imageSrc": "https://t4.ftcdn.net/jpg/02/41/50/59/360_F_241505908_DalEMSpBIPBUhdpBbf5NkT6YlM3OheQl.jpg",
+            "city": "Jaisalmer",
+            "state": "Rajasthan",
+            "rating": "3.8",
+            "price": "$155.50 night",
+            "img1": "https://media.istockphoto.com/id/942152278/photo/gadisar-lake-at-jaisalmer-rajasthan-at-sunrise-with-ancient-temples-and-archaeological-ruins.webp?b=1&s=170667a&w=0&k=20&c=e4mD48ZKSpMUv1hTZ7Ut-CjlKymZ6eoy3Wjnv_I9wPA=",
+            "img2": "https://media.istockphoto.com/id/942152278/photo/gadisar-lake-at-jaisalmer-rajasthan-at-sunrise-with-ancient-temples-and-archaeological-ruins.webp?b=1&s=170667a&w=0&k=20&c=e4mD48ZKSpMUv1hTZ7Ut-CjlKymZ6eoy3Wjnv_I9wPA=",
+            "img3": "https://media.istockphoto.com/id/942152278/photo/gadisar-lake-at-jaisalmer-rajasthan-at-sunrise-with-ancient-temples-and-archaeological-ruins.webp?b=1&s=170667a&w=0&k=20&c=e4mD48ZKSpMUv1hTZ7Ut-CjlKymZ6eoy3Wjnv_I9wPA=",
+            "img4": "https://media.istockphoto.com/id/942152278/photo/gadisar-lake-at-jaisalmer-rajasthan-at-sunrise-with-ancient-temples-and-archaeological-ruins.webp?b=1&s=170667a&w=0&k=20&c=e4mD48ZKSpMUv1hTZ7Ut-CjlKymZ6eoy3Wjnv_I9wPA="
+        },
+        {
+            "id": 6,
+            "imageSrc": "https://media.istockphoto.com/id/805563154/photo/mehrangharh-fort-and-jaswant-thada-mausoleum-in-jodhpur-rajasthan-india.jpg?b=1&s=170667a&w=0&k=20&c=UMJ1yrvc6WBShcbeNeC0ujKNQFo_OHXaJuw5f5A578s=",
+            "city": "Jodhpur",
+            "state": "Rajasthan",
+            "rating": "3.8",
+            "price": "$135.00 night",
+            "img1": "https://vijaykarnataka.com/thumb/101668008/places-to-visit-in-jodhpur-101668008.jpg?imgsize=79676&width=1200&height=900&resizemode=75",
+            "img2": "https://vijaykarnataka.com/thumb/101668008/places-to-visit-in-jodhpur-101668008.jpg?imgsize=79676&width=1200&height=900&resizemode=75",
+            "img3": "https://vijaykarnataka.com/thumb/101668008/places-to-visit-in-jodhpur-101668008.jpg?imgsize=79676&width=1200&height=900&resizemode=75",
+            "img4": "https://vijaykarnataka.com/thumb/101668008/places-to-visit-in-jodhpur-101668008.jpg?imgsize=79676&width=1200&height=900&resizemode=75"
+        },
+        {
+            "id": 7,
+            "imageSrc": "https://www.holidify.com/images/bgImages/RISHIKESH.jpg",
+            "city": "Rishikesh",
+            "state": "Uttarakhand",
+            "rating": "4.8",
+            "price": "$135.00 night",
+            "img1": "https://images.unsplash.com/photo-1603867106100-0d2039fc8757?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmlzaGlrZXNoJTJDJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D",
+            "img2": "https://images.unsplash.com/photo-1603867106100-0d2039fc8757?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmlzaGlrZXNoJTJDJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D",
+            "img3": "https://t3.ftcdn.net/jpg/04/74/52/86/360_F_474528672_vpQtkeor5wF3bF8wkm7Fbt3BOhlEoBRh.jpg",
+            "img4": "https://t3.ftcdn.net/jpg/04/74/52/86/360_F_474528672_vpQtkeor5wF3bF8wkm7Fbt3BOhlEoBRh.jpg"
+        },
+        {
+            "id": 8,
+            "imageSrc": "https://wallpapercave.com/wp/wp3768670.jpg",
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "rating": "4.8",
+            "price": "$155.50 night",
+            "img1": "https://e0.pxfuel.com/wallpapers/71/430/desktop-wallpaper-bandra-worli-sea-link-mumbai-skyline.jpg",
+            "img2": "https://e0.pxfuel.com/wallpapers/71/430/desktop-wallpaper-bandra-worli-sea-link-mumbai-skyline.jpg",
+            "img3": "https://e0.pxfuel.com/wallpapers/71/430/desktop-wallpaper-bandra-worli-sea-link-mumbai-skyline.jpg",
+            "img4": "https://e0.pxfuel.com/wallpapers/71/430/desktop-wallpaper-bandra-worli-sea-link-mumbai-skyline.jpg"
+        },
+        {
+            "id": 9,
+            "imageSrc": "https://wallpapercave.com/wp/wp4190260.jpg",
+            "city": "Panaji",
+            "state": "Goa",
+            "rating": "4.3",
+            "price": "$112.75 night",
+            "img1": "https://c4.wallpaperflare.com/wallpaper/102/1014/539/goa-water-sky-resort-wallpaper-preview.jpg",
+            "img2": "https://c4.wallpaperflare.com/wallpaper/102/1014/539/goa-water-sky-resort-wallpaper-preview.jpg",
+            "img3": "https://easygovacation.com/images/Goa/Goa4.jpg",
+            "img4": "https://easygovacation.com/images/Goa/Goa4.jpg"
+        },
+        
+        {
+            "id": 10,
+            "imageSrc": "https://static.toiimg.com/photo/54559212.cms",
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "rating": "3.8",
+            "price": "$135.00 night",
+            "img1": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg",
+            "img2": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg",
+            "img3": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg",
+            "img4": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg"
+        },
+        {
+            "id": 11,
+            "imageSrc": "https://static.toiimg.com/photo/54559212.cms",
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "rating": "3.8",
+            "price": "$135.00 night",
+            "img1": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg",
+            "img2": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg",
+            "img3": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg",
+            "img4": "https://w0.peakpx.com/wallpaper/474/58/HD-wallpaper-building-bangalore-home-india-night.jpg"
+        }
+    ]
+}

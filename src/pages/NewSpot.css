@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: large;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: rgb(221, 236, 250);
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 10px 50px 100px 10px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: rgb(221, 236, 250);
+}
+
+.row {
+  display: flex;
+}
+
+.form-group .photos {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: rgb(221, 236, 250);
+}
+
+/* .form-group.photos label {
+  display: block;
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+.form-group.photos p {
+  font-size: medium;
+  margin-bottom: 15px;
+}
+
+.form-group.photos input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  background-color: rgb(221, 236, 250);
+} */
+
+/* .form-group input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #0056b3;
+} */

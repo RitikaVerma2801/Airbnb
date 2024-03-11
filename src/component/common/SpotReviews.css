@@ -1,0 +1,39 @@
+.spotReview{
+    padding: 20px 0;
+}
+
+.newSpot{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newSpot span{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.addNewSpot button{
+    margin: 15px 0px;
+    background-color: grey;
+    color: white;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.spotData {
+    margin-top: 15px;
+}
+
+.spotData span{
+    color: gray;
+}
+
+.spotData p{
+    margin: 7px 0px 0px 0px;
+}
+
+.addNewSpot .update-btn{
+    margin-right: 15px;
+}

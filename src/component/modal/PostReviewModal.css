@@ -1,0 +1,46 @@
+.write-review textarea{
+    margin-top: 18px ;
+    width: 92%;
+    height: 120px;
+    padding: 10px;
+    background-color:rgb(220 234 247);
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 17px;
+    /* font-weight: bold */
+}
+
+.star{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px;
+}
+
+.star-text{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 5px;
+    font-family: system-ui;
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background-color:rgb(203, 81, 81);
+    color: white;
+    border: 2px solid black;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:disabled {
+    background-color: white; 
+    color: #666; 
+    border-color: gray;
+    cursor: not-allowed; 
+    box-shadow: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}

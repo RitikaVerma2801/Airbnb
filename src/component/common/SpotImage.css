@@ -1,0 +1,60 @@
+.spot-info {
+  margin-bottom: 20px;
+  font-family: cursive;
+  font-size: 18px;
+}
+
+.spot-image {
+  display: flex;
+}
+
+.half-image{
+  width: 50%;
+  margin-right: 30px;
+  height: 430px;
+}
+
+.image{
+  height: 100%;
+  width: 100%;
+}
+
+.top-image,
+.bottom-image {
+  display: flex;
+  height:200px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.top-image img, 
+.bottom-image img{
+  width: 47%;
+}
+
+
+
+
+
+
+
+/* .left-image {
+    width:50%;
+}
+
+.left-image img{
+  width: 100%;
+}
+
+.right-image {
+  width: 50%;
+}
+
+.right-image img {
+  width: 48%
+}
+
+.right-top img,
+.right-bottom img{
+  margin: 3px 3px 0 3px;;
+}  */

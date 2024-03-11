@@ -1,0 +1,50 @@
+.spot-desc-container{
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.left-container{
+  width: 70%;
+  text-align: justify;
+  margin-right: 40px;
+  margin-top: 0;
+}
+
+.right-container{
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  margin-bottom:auto;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-25{
+  font-size: 25px;
+  font-weight:800;
+}
+
+.f-18{
+  font-size: 18px;
+  font-weight:600;
+}
+
+.reviews{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reserve-button{
+  margin-top: 20px;
+  padding: 10px;
+  background-color: maroon;
+  color: white;
+  width: 100%;
+}

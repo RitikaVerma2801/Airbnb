@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid gainsboro;
+  }
+  
+  .header-right{
+    display: flex;
+  }
+
+  .header-right .create-spot{
+    margin-top: 8px;
+    margin-right: 30px;
+    font-size: large;
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 20px; 
+    cursor: pointer;
+  }
+  
+  .login.open {
+    position: relative;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 35px; 
+    right: 0;
+    background-color: white;
+    border: 2px solid black;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 5px 15px ; 
+    width: 100%;
+    padding-right: 40px;
+    font-size:larger;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown :hover {
+    color: #007bff;
+  }
+
+  .user-dropdown{
+    position: absolute;
+    top: 35px; 
+    right: 0;
+    background-color: white;
+    border: 2px solid black;
+    padding: 8px 15px; 
+    white-space: nowrap;
+  }
+
+  .user-dropdown div{
+    margin-right: 10px;
+    padding: 3px;
+    font-size:larger;
+  }
+
+  .user-dropdown-btn{
+    margin: 10px 0px;
+    padding: 3px 10px;
+    font-size: 15px;
+    background-color: rgb(203, 81, 81);
+    color: white;
+    border: 2px solid black;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .user-dropdown-btn:hover {
+    background-color: white;
+    color: rgb(203, 81, 81);
+    cursor: pointer;
+  }
+
+  .success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4eae64; 
+    color: #fff;
+    font-size: 30px;
+    padding: 20px 45px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999; 
+  }
+  
