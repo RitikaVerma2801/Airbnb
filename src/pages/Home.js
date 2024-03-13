@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from "../component/common/Card";
+import Card from "../component/common/Card/Card";
 import "./Home.css";
 import JSONData from "../constants/data.json";
 

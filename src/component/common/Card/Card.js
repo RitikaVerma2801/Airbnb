@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
-import StarRating from "../atoms/StarRating";
+import StarRating from "../../atoms/StarRating";
 
 const Card = ({data}) => {
   const { id, imageSrc, city, state, rating, price } = data;

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./SpotReviews.css";
-import PostReviewModal from "../modal/PostReviewModal";
-import DeleteReviewModal from "../modal/DeleteReviewModal";
-import ModalPopup from "../modal/ModalPopup";
+import PostReviewModal from "../../modal/PostReviewModal";
+import DeleteReviewModal from "../../modal/DeleteReviewModal";
+import ModalPopup from "../../modal/ModalPopup";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addReview, updateReview } from "../../redux/actions/reviewActions";
+import { addReview, updateReview } from "../../../redux/actions/reviewActions";
 
 const SpotReviews = ({ cityName }) => {
   const [isPostReviewModalOpen, setPostReviewModalOpen] = useState(false);

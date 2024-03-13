@@ -7,6 +7,7 @@ import "./Header.css";
 import LoginModal from "../modal/LoginModal";
 import SignupModal from "../modal/SignupModal";
 import ModalPopup from "../modal/ModalPopup";
+import Button from "../common/Button/Button";
 
 const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -147,7 +148,8 @@ const Header = () => {
                 <div>
                   <Link to="/">Manage Spots</Link>
                 </div>
-                <button onClick={handleLogout}>Log Out</button>
+                {/* <button onClick={handleLogout}>Log Out</button> */}
+                <Button onClick={handleLogout} width="20%" label="Log Out"/>
               </div>
             )}
           </div>
