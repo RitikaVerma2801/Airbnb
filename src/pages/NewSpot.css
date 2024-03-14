@@ -13,13 +13,7 @@
   margin: 15px 0;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: large;
-}
-
-.form-group input[type="text"] {
+.form-group input {
   width: 100%;
   padding: 10px;
   border: 2px solid black;
@@ -27,7 +21,14 @@
   background-color: rgb(221, 236, 250);
 }
 
-.form-group textarea {
+/* .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: large;
+} */
+
+
+/* .form-group textarea {
   width: 100%;
   padding: 10px 50px 100px 10px;
   border: 2px solid black;
@@ -45,7 +46,7 @@
   border: 2px solid black;
   border-radius: 2px;
   background-color: rgb(221, 236, 250);
-}
+} */
 
 /* .form-group.photos label {
   display: block;

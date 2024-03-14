@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteReview } from "../../redux/actions/reviewActions";
 import "./DeleteReviewModal.css";
+import Button from "../common/Button/Button";
 
 const DeleteReviewModal = ({ onClose, reviewID }) => {
   const dispatch = useDispatch();
@@ -18,12 +19,10 @@ const DeleteReviewModal = ({ onClose, reviewID }) => {
         <strong>Are you sure you want to delete this review?</strong>
       </div>
       <div>
-        <button className="yes-btn" onClick={handleDeleteReview}>Yes(Delete Review)</button>
+        <Button onClick={handleDeleteReview} label="Yes(Delete Review)"/>
       </div>
       <div>
-        <button className="no-btn" onClick={onClose}>
-          No(Keep Review)
-        </button>
+        <Button onClick={onClose} label="No(Keep Review)" className="no-btn" />
       </div>
     </>
   );

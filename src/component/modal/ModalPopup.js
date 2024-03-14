@@ -1,6 +1,7 @@
 import React from "react";
 import "./ModalPopup.css";
 import { IoMdCloseCircle } from "react-icons/io";
+import Button from "../common/Button/Button";
 
 const ModalPopup = ({
   isOpen,
@@ -28,9 +29,7 @@ const ModalPopup = ({
         </div>
         <div className="modal-content">{children}</div>
         {buttonVisible && (
-          <button className="modal-btn" onClick={handleSubmit}>
-            {buttonText}
-          </button>
+          <Button onClick={handleSubmit} label={buttonText}/>
         )}
       </div>
     </div>

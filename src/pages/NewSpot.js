@@ -1,90 +1,94 @@
-
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import updateNewSpot from "../redux/actions/newSpotActions";
+import React, { useState } from "react";
 import "./NewSpot.css";
+import FormInputGenerator from "../component/common/InputField/FormInputGenerator";
+import Button from "../component/common/Button/Button";
 
 const NewSpot = () => {
-  const formData = useSelector((state) => state.newSpot);
-  console.log(formData)
-  const dispatch = useDispatch();
+  const [formData, setFormData] = useState({
+    country: "",
+    streetAddress: "",
+    city: "",
+    state: "",
+    latitude: "",
+    longitude: "",
+    description: "",
+    title: "",
+    basePrice: "",
+    previewUrl: "",
+    url1: "",
+    url2: "",
+    url3: "",
+    url4: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    dispatch(updateNewSpot({ ...formData, [name]: value }));
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const renderFormGroup = (label, name, value, placeholder, type = "text", className = "") => (
-  <div className={`form-group ${className}`}>
-    <label>{label}</label>
-    {type === "textarea" ? (
-      <textarea
-        name={name}
-        value={value}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className={type === "textarea" ? "textarea" : ""}
-      />
-    ) : (
-      <input
-        type={type}
-        name={name}
-        value={value}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className={type === "text" ? "photos" : ""}
-      />
-    )}
-  </div>
-);
-
-
-  const renderPhotoInputs = () => {
-    const placeholders = [
-      "Preview Image URL",
-      "Image URL",
-      "Image URL",
-      "Image URL",
-      "Image URL",
-    ];
-
-    return placeholders.map((placeholder, index) => (
-      <div key={index}>
-        {renderFormGroup("Photo Link", `url${index}`, formData[`url${index}`], placeholder, "url")}
-      </div>
-    ));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData, "formData");
   };
+
+  const inputFields = [
+    {
+      label: "Country",
+      name: "country",
+      placeholder: "Country",
+    },
+    { label: "Street Address", name: "streetAddress", placeholder: "Address" },
+    { label: "City", name: "city", placeholder: "City" },
+    { label: "State", name: "state", placeholder: "State" },
+    { label: "Latitude", name: "latitude", placeholder: "Latitude" },
+    { label: "Longitude", name: "longitude", placeholder: "Longitude" },
+    {
+      label: "Describe your place to guests",
+      name: "description",
+      placeholder: "Please write at least 30 characters",
+    },
+    {
+      label: "Create a title for your spot",
+      name: "title",
+      placeholder: "Name of your spot",
+    },
+    {
+      label: "Set a base price for your spot",
+      name: "basePrice",
+      placeholder: "Price per night (USD)",
+    },
+    {
+      label: "Preview Image URL",
+      name: "previewUrl",
+      placeholder: "Preview Image URL",
+    },
+    { label: "Image URL", name: "url1", placeholder: "Image URL" },
+    { label: "Image URL", name: "url2", placeholder: "Image URL" },
+    { label: "Image URL", name: "url3", placeholder: "Image URL" },
+    { label: "Image URL", name: "url4", placeholder: "Image URL" },
+  ];
 
   return (
     <div className="container">
-      <form className="form-container">
-        <h1>Create a new Spot</h1>
-        <h2>Where's your place located</h2>
-        <h3>
-          Guests will only get your exact address once they've booked a reservation.
-        </h3>
-        {renderFormGroup("Country", "country", formData.country, "Country")}
-        {renderFormGroup("Street Address", "streetAddress", formData.streetAddress, "Address")}
-        <div className="row">
-          {renderFormGroup("City", "city", formData.city, "City")}
-          {renderFormGroup("State", "state", formData.state, "State")}
-        </div>
-        <div className="row">
-          {renderFormGroup("Latitude", "latitude", formData.latitude, "Latitude")}
-          {renderFormGroup("Longitude", "longitude", formData.longitude, "Longitude")}
-        </div>
-        {renderFormGroup("Describe your place to guests", "description", formData.description, "Please write at least 30 characters", "textarea")}
-        {renderFormGroup("Create a title for your spot", "title", formData.title, "Name of your spot")}
-        {renderFormGroup("Set a base price for your spot", "basePrice", formData.basePrice, "Price per night (USD)")}
-        <div className="form-group photos">
-          <label>Liven up your spot with photos</label>
-          <p>Submit a link to at least one photo to publish your spot.</p>
-          {renderPhotoInputs()}
+      <form onSubmit={handleSubmit} className="form-container">
+        <div className="form-group">
+          <h1>Create a new Spot</h1>
+          <h2>Where's your place located</h2>
+          <h3>
+            Guests will only get your exact address once they've booked a
+            reservation.
+          </h3>
+          <FormInputGenerator
+            fields={inputFields}
+            formData={formData}
+            onChange={handleChange}
+          />
         </div>
         <div className="form-group">
-          <button type="submit" className="create-spot-button">
-            Create Spot
-          </button>
+          <Button type="submit" label="Create Spot" />
         </div>
       </form>
     </div>
@@ -93,39 +97,48 @@ const NewSpot = () => {
 
 export default NewSpot;
 
-
-
-// import React from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import updateNewSpot from "../redux/actions/newSpotActions";
+// import React, { useState } from "react";
 // import "./NewSpot.css";
 
 // const NewSpot = () => {
-//   const formData = useSelector((state) => state.newSpot);
-//   console.log(formData);
-//   const dispatch = useDispatch();
+//   const [formData, setFormData] = useState({
+//     country: "",
+//     streetAddress: "",
+//     city: "",
+//     state: "",
+//     latitude: "",
+//     longitude: "",
+//     description: "",
+//     title: "",
+//     basePrice: "",
+//     previewUrl: "",
+//     url1: "",
+//     url2: "",
+//     url3: "",
+//     url4: "",
+//   });
 
 //   const handleChange = (e) => {
 //     const { name, value } = e.target;
-//     const updatedData = { ...formData, [name]: value };
-//     dispatch(updateNewSpot(updatedData));
+//     setFormData((prevData) => ({
+//       ...prevData,
+//       [name]: value,
+//     }));
 //   };
 
 //   const handleSubmit = (e) => {
 //     e.preventDefault();
-//     // Handle form submission, e.g., send data to the server
+//     console.log(formData, "formData");
 //   };
 
 //   return (
-//     <div className="container">
+//     <>
+//           <div className="container">
 //       <form onSubmit={handleSubmit} className="form-container">
 //         <div className="form-group">
 //           <h1>Create a new Spot</h1>
 //           <h2>Where's your place located</h2>
-//           <h3>
-//             Guests will only get your exact address once they booked a
-//             reservation.
-//           </h3>
+//           <h3>Guests will only get your exact address once they've booked a reservation.</h3>
 //           <label>Country</label>
 //           <input
 //             type="text"
@@ -189,25 +202,17 @@ export default NewSpot;
 //             />
 //           </div>
 //         </div>
-//         <div className="form-group description">
+//         <div className="form-group">
 //           <label>Describe your place to guests</label>
-//           <p>
-//             Mention the best features of your space, any special amenities like
-//             fast wifi or parking, and what you love about the neighborhood.
-//           </p>
 //           <textarea
 //             name="description"
 //             value={formData.description}
 //             onChange={handleChange}
-//             placeholder="Please write atleast 30 characters"
+//             placeholder="Please write at least 30 characters"
 //           ></textarea>
 //         </div>
-//         <div className="form-group title">
+//         <div className="form-group">
 //           <label>Create a title for your spot</label>
-//           <p>
-//             Catch guests' attention with a spot title that highlights what makes
-//             your place special.
-//           </p>
 //           <input
 //             type="text"
 //             name="title"
@@ -216,12 +221,8 @@ export default NewSpot;
 //             placeholder="Name of your spot"
 //           />
 //         </div>
-//         <div className="form-group prices">
+//         <div className="form-group">
 //           <label>Set a base price for your spot</label>
-//           <p>
-//             Competitive pricing can help your listing stand out and rank higher
-//             in search results.
-//           </p>
 //           <input
 //             type="text"
 //             name="basePrice"
@@ -230,7 +231,7 @@ export default NewSpot;
 //             placeholder="Price per night (USD)"
 //           />
 //         </div>
-//         <div className="form-group photos">
+//         <div className="form-group">
 //           <label>Liven up your spot with photos</label>
 //           <p>Submit a link to at least one photo to publish your spot.</p>
 //           <div>
@@ -286,8 +287,9 @@ export default NewSpot;
 //         </div>
 //       </form>
 //     </div>
+
+//     </>
 //   );
 // };
 
 // export default NewSpot;
-

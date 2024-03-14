@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./SpotReviews.css";
 import PostReviewModal from "../../modal/PostReviewModal";
@@ -7,40 +7,26 @@ import ModalPopup from "../../modal/ModalPopup";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addReview, updateReview } from "../../../redux/actions/reviewActions";
+import Button from "../Button/Button";
+import SpotReviewAndRating from "../SpotReviewAndRating/SpotReviewAndRating";
 
 const SpotReviews = ({ cityName }) => {
   const [isPostReviewModalOpen, setPostReviewModalOpen] = useState(false);
   const [isDeleteReviewModalOpen, setDeleteReviewModalOpen] = useState(false);
-  const [averageStarRating, setAverageStarRating] = useState(0);
   const [selectedReviewID, setSelectedReviewID] = useState(null);
   const [selectedReviewData, setSelectedReviewData] = useState(null);
   // const [hasExistingReview, setHasExistingReview] = useState(false);
 
+  const dispatch = useDispatch();
+
   const reviewFormData = useSelector((state) => state?.review?.reviews);
   console.log(reviewFormData, "reviewFormData");
 
-  const dispatch = useDispatch();
   const { id } = useParams();
   const reviewsForCurrentSpot = reviewFormData.filter(
     (review) => review.spotID === id
   );
-  console.log(reviewsForCurrentSpot, "reviewsForCurrentSpot");
   const numberOfReviews = reviewsForCurrentSpot.length;
-
-  // const numberOfReviews = reviewFormData.filter(
-  //   (review) => review.spotID === id
-  // ).length;
-
-  useEffect(() => {
-    if (numberOfReviews > 0) {
-      const sumStarRating = reviewsForCurrentSpot.reduce(
-        (total, review) => total + review.starRating,
-        0
-      );
-      const averageRating = sumStarRating / numberOfReviews;
-      setAverageStarRating(averageRating);
-    }
-  }, [reviewsForCurrentSpot, numberOfReviews]);
 
   const openPostReviewModal = (reviewData) => {
     setPostReviewModalOpen(true);
@@ -103,16 +89,7 @@ const SpotReviews = ({ cityName }) => {
   return (
     <>
       <div className="spotReview">
-        {numberOfReviews > 0 && (
-          <div className="newSpot">
-            <FaStar size={25} />
-            <span>{averageStarRating.toFixed(1)}</span>
-            <span>.</span>
-            <span>
-              {numberOfReviews} {numberOfReviews > 1 ? "Reviews" : "Review"}
-            </span>
-          </div>
-        )}
+        <SpotReviewAndRating />
 
         {numberOfReviews > 0 ? (
           reviewsForCurrentSpot.map((review, index) => (
@@ -124,18 +101,18 @@ const SpotReviews = ({ cityName }) => {
                 <span>{formatDate(review.createdAt)}</span>
                 <p>{review.comment}</p>
               </div>
-              <button
-                className="update-btn"
+
+              <Button
+                className="update-button"
                 onClick={() => openPostReviewModal(review)}
-              >
-                Update
-              </button>
-              <button
-                className="delete-btn"
+                label="Update"
+              />
+
+              <Button
+                className="button"
                 onClick={() => openDeleteReviewModal(review.reviewID)}
-              >
-                Delete
-              </button>
+                label="Delete"
+              />
             </div>
           ))
         ) : (
@@ -144,9 +121,11 @@ const SpotReviews = ({ cityName }) => {
               <FaStar size={25} />
               <span>New</span>
             </div>
-            <button onClick={() => openPostReviewModal(null)}>
-              Post your Review
-            </button>
+            <Button
+              className="button"
+              onClick={() => openPostReviewModal(null)}
+              label="Post your Review"
+            />
             <div>
               <strong>Be the first to post a review!</strong>
             </div>

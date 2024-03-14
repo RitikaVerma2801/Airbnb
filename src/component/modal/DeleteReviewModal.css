@@ -1,27 +1,7 @@
 .review-text{
-    margin-top: 15px;
-}
-
-.yes-btn{
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    background-color:rgb(203, 81, 81);
-    color: white;
-    border: 2px solid black;
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: 20px
+    margin-top: 18px;
 }
 
 .no-btn{
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
     background-color:rgb(101, 98, 98);
-    color: white;
-    border: 2px solid black;
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: 20px
 }

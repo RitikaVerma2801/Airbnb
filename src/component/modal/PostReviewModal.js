@@ -1,7 +1,8 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./PostReviewModal.css";
 import StarReview from "../atoms/StarReview";
+import Button from "../common/Button/Button";
 
 const PostReviewModal = ({ onClose, onPostReview, reviewData }) => {
   const [commentValue, setCommentValue] = useState(
@@ -61,13 +62,12 @@ const PostReviewModal = ({ onClose, onPostReview, reviewData }) => {
           </div>
           <StarReview onStarClick={handleStarChange} value={starValue} />
           <div>
-            <button
+            <Button
               type="submit"
               className="submit-btn"
               disabled={isSubmitDisabled}
-            >
-              {reviewData ? "Update Review" : "Submit Your Review"}
-            </button>
+              label={reviewData ? "Update Review" : "Submit Your Review"}
+            />
           </div>
         </div>
       </form>

@@ -1,8 +1,9 @@
 import React from "react";
 import "./SpotDescription.css";
-import { FaStar } from "react-icons/fa";
+import Button from "../Button/Button";
+import SpotReviewAndRating from "../SpotReviewAndRating/SpotReviewAndRating";
 
-const SpotDescription = ({ numberOfReviews, averageStarRating }) => {
+const SpotDescription = () => {
   const handleClick = () => {
     alert("Feature coming soon...");
   };
@@ -40,16 +41,15 @@ const SpotDescription = ({ numberOfReviews, averageStarRating }) => {
             <span className="f-25">
               $123.45 <label className="f-18">night</label>
             </span>
-            <div className="f-18 reviews">
-              <FaStar size={25} />
-              <span>{averageStarRating}</span>
-              <span>.</span>
-              <span>{numberOfReviews}</span>
-            </div>
+
+            <SpotReviewAndRating />
+            
           </div>
-          <button className="reserve-button" onClick={handleClick}>
-            Reserve
-          </button>
+          <Button
+            onClick={handleClick}
+            label="Reserve"
+            style={{ "background-color": "maroon" }}
+          />
         </div>
       </div>
     </>

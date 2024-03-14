@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import "./SpotDetails.css";
 import SpotImage from "../component/common/SpotImage/SpotImage";
@@ -11,22 +11,12 @@ const SpotDetails = () => {
   const selectedCardData = JSONData.data.find((card) => card.id === Number(id));
   // console.log(selectedCardData,"ritika")
 
-  const [numberOfReviews, setNumberOfReviews] = useState(0);
-  const [averageStarRating, setAverageStarRating] = useState(0);
-
   return (
     <>
       <div className="spot-details-container">
         <SpotImage selectedData={selectedCardData} />
-        <SpotDescription
-          numberOfReviews={numberOfReviews}
-          averageStarRating={averageStarRating}
-        />
-        <SpotReviews
-          cityName={selectedCardData.city}
-          setNumberOfReviews={setNumberOfReviews}
-          setAverageStarRating={setAverageStarRating}
-        />
+        <SpotDescription />
+        <SpotReviews cityName={selectedCardData.city} />
       </div>
     </>
   );

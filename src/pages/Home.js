@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "../component/common/Card/Card";
 import "./Home.css";
 import JSONData from "../constants/data.json";
+import Button from "../component/common/Button/Button";
 
 const cardsPerPage = 10;
 
@@ -25,7 +26,9 @@ const Home = () => {
     <div className="content-container">
       <div className="card-container">
         {visibleCards.map((cardData) => (
-          <Card key={cardData.id} data={cardData}
+          <Card
+            key={cardData.id}
+            data={cardData}
             // key={cardData.id}
             // id={cardData.id}
             // imageSrc={cardData.imageSrc}
@@ -38,26 +41,24 @@ const Home = () => {
       </div>
       <div className="button-container">
         {totalPages > 1 && (
-          <button
+          <Button
             className={`button-container-btn ${
               currentPage === 1 ? "disabled" : ""
             }`}
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-          >
-            Prev
-          </button>
+            label="Prev"
+          />
         )}
         {totalPages > 1 && (
-          <button
+          <Button
             className={`button-container-btn ${
               currentPage === totalPages ? "disabled" : ""
             }`}
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-          >
-            Next
-          </button>
+            label="Next"
+          />
         )}
       </div>
     </div>

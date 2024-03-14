@@ -19,7 +19,6 @@ const Header = () => {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-
   const [loginFormData, setLoginFormData] = useState({
     username: "",
     password: "",
@@ -81,10 +80,10 @@ const Header = () => {
       existingUserData.push(userData);
       localStorage.setItem("users", JSON.stringify(existingUserData));
 
-      setSuccessMessage("Signup successful!"); 
+      setSuccessMessage("Signup successful!");
       setTimeout(() => {
-        setSuccessMessage(""); 
-        closeModal(); 
+        setSuccessMessage("");
+        closeModal();
       }, 2000);
     }
   };
@@ -97,6 +96,12 @@ const Header = () => {
 
   const handleLoginSubmit = (loginFormData) => {
     console.log("Login Form submitted", loginFormData);
+
+    if (!loginFormData.username || !loginFormData.password) {
+      setError("Please enter both username and password");
+      return;
+    }
+    
     const users = JSON.parse(localStorage.getItem("users"));
     console.log(users, "user");
     const matchedUser = users.find(
@@ -121,8 +126,6 @@ const Header = () => {
     setUserInfo(null);
   };
 
-  console.log(isSignupModalOpen);
-
   return (
     <div className="header">
       <div>
@@ -132,7 +135,11 @@ const Header = () => {
       </div>
 
       <div className="header-right">
-        {isLoggedIn && <Link to="/new-spot" className="create-spot">Create a new spot</Link>}
+        {isLoggedIn && (
+          <Link to="/new-spot" className="create-spot">
+            Create a new spot
+          </Link>
+        )}
 
         {isLoggedIn ? (
           <div
@@ -148,8 +155,13 @@ const Header = () => {
                 <div>
                   <Link to="/">Manage Spots</Link>
                 </div>
-                {/* <button onClick={handleLogout}>Log Out</button> */}
-                <Button onClick={handleLogout} width="20%" label="Log Out"/>
+                <div className="logout-container">
+                  <Button
+                    onClick={handleLogout}
+                    className="logoutBtn"
+                    label="Log Out"
+                  />
+                </div>
               </div>
             )}
           </div>
@@ -193,7 +205,6 @@ const Header = () => {
             />
           )}
         </ModalPopup>
-        
       )}
       {successMessage && (
         <div className="success-message">{successMessage}</div>
